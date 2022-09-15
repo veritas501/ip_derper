@@ -5,7 +5,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # ========= CONFIG =========
 # - download links
-ENV GOLANG_URL=https://go.dev/dl/go1.18.linux-amd64.tar.gz
+ENV GOLANG_URL=https://go.dev/dl/go1.19.linux-amd64.tar.gz
 ENV MODIFIED_DERPER_GIT=https://github.com/veritas501/tailscale.git
 # ==========================
 
@@ -13,7 +13,7 @@ ENV MODIFIED_DERPER_GIT=https://github.com/veritas501/tailscale.git
 RUN apt-get update && \
     apt-get install -y git curl wget tar
 
-# install golang 1.17
+# install golang 1.19
 RUN wget $GOLANG_URL -O golang.tar.gz && \
     tar xf golang.tar.gz -C /usr/local && \
     rm golang.tar.gz
