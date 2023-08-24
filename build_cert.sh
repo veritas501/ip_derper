@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 CERT_HOST=$1
 CERT_DIR=$2
@@ -29,4 +29,4 @@ IP.1 = $CERT_HOST
 " > "$CONF_FILE"
 
 mkdir -p "$CERT_DIR"
-openssl req -x509 -nodes -days 730 -newkey rsa:2048 -keyout "$CERT_DIR/$CERT_HOST.key" -out "$CERT_DIR/$CERT_HOST.crt" -config "$CONF_FILE"
+openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout "$CERT_DIR/$CERT_HOST.key" -out "$CERT_DIR/$CERT_HOST.crt" -config "$CONF_FILE"
